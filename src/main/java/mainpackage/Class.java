@@ -17,15 +17,16 @@ public class Class extends Frame implements ActionListener, KeyListener {
         System.out.println("Se ha iniciado la calculadora.");
 
         this.setTitle("Calculadora");
-        this.setSize(400, 400);
+        this.setSize(500, 400);
         this.setLayout(new BorderLayout());
         this.addWindowListener(new Class.Escuchador());
 
         //Defino la pantalla con un TextField
         t1 = new TextField();
+        t1.setEditable(false);
         t1.setFont(new Font("Script fonts", Font.BOLD, 50));
         t1.addKeyListener(this);
-        t1.setBackground(Color.GRAY);
+        t1.setBackground(Color.LIGHT_GRAY);
         this.add(t1, BorderLayout.NORTH);
 
         //Defino el panel con los numeros de la calculadora.
@@ -64,7 +65,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
         //Defino el panel con los numeros de la calculadora.
         Panel operadores = new Panel();
         operadores.setLayout(new GridLayout(6, 1));
-        bc = new Button("C");
+        bc = new Button("        C       ");
         bc.setBackground(Color.CYAN);
         operadores.add(bc);
         bsuma = new Button("+");
@@ -174,7 +175,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
                 double comprobador;
                 num1 = Double.parseDouble(t1.getText());
             } catch (NumberFormatException f) {
-                t1.setText("Invalid Format");
+                t1.setText("Formato no válido");
                 return;
             }
             numpantalla = "";
@@ -185,7 +186,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
             try {
                 num1 = Double.parseDouble(t1.getText());
             } catch (NumberFormatException f) {
-                t1.setText("Invalid Format");
+                t1.setText("Formato no válido");
                 return;
             }
             numpantalla = "";
@@ -196,7 +197,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
             try {
                 num1 = Double.parseDouble(t1.getText());
             } catch (NumberFormatException f) {
-                t1.setText("Invalid Format");
+                t1.setText("Formato no válido");
                 return;
             }
             numpantalla = "";
@@ -207,7 +208,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
             try {
                 num1 = Double.parseDouble(t1.getText());
             } catch (NumberFormatException f) {
-                t1.setText("Invalid Format");
+                t1.setText("Formato no válido");
                 return;
             }
             numpantalla = "";
@@ -218,7 +219,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
             try {
                 num1 = Double.parseDouble(t1.getText());
             } catch (NumberFormatException f) {
-                t1.setText("Invalid Format");
+                t1.setText("Formato no válido");
                 return;
             }
             numpantalla = "";
@@ -232,7 +233,7 @@ public class Class extends Frame implements ActionListener, KeyListener {
             try {
                 num2 = Double.parseDouble(t1.getText());
             } catch (NumberFormatException f) {
-                t1.setText("ENTER NUMBER FIRST ");
+                t1.setText("Introduce un numero ");
                 return;
 
             }
